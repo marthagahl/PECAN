@@ -21,7 +21,7 @@ We trained on compounds from the NCI-60 dataset, which can be found [here](https
 To train:
 
 ```
-python3 train.py &lt;experiment name&gt; --data-path &lt;/path/to/data/&gt; --out &lt;/path/to/out/directory/&gt;
+python3 train.py <experiment name> --data-path </path/to/data/> --out </path/to/out/directory/>
 ```
 
 ### Testing New Compounds
@@ -35,7 +35,7 @@ Then run test.py using the Morgan fingerprints and loading the given checkpoint:
 To test:
 
 ```
-python3 test.py &lt;experiment name&gt; --load &lt;/path/to/checkpoint/weights.ckpt&gt;  --data-path &lt;/path/to/compounds/&gt; --out &lt;/path/to/out/directory/&gt;
+python3 test.py <experiment name> --load </path/to/checkpoint/weights.ckpt>  --data-path </path/to/compounds.csv> --out </path/to/out/directory/>
 ```
 
 ### Citing PECAN
