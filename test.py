@@ -25,10 +25,14 @@ if __name__ == '__main__':
         trainer = Trainer()
         predictions = trainer.predict(model)
 
-        preds_out = open(args.out + 'PECAN_predictions.txt','w')
+        cell_lines = open('cell_lines.txt','r')
+        preds_out = open(args.out + 'PECAN_predictions.csv','w')
+        preds_out.write(cell_lines.readline()+'\n')
         for p in predictions[0]:
             p = p.tolist()
-            preds_out.write(str(p)+'\n')
+            for v in p:
+                preds_out.write(str(v)+',')
+            preds_out.write('\n')
         preds_out.close()
         print ('Predictions written')
 

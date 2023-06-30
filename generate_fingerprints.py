@@ -40,7 +40,6 @@ def savePickle(fp_array, out_path, out_name):
 
 smiles = []
 smile_file = open(smile_path,'r')
-smile_file.readline()
 
 for line in smile_file:
     vals=line.split(',')

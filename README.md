@@ -30,7 +30,7 @@ PECAN is fully trained and doesn't require extra training or fine tuning to be u
 
 To test compounds on PECAN, first convert the SMILE strings of any compounds to Morgan fingerprints using generate_fingerprints.py. This requires an environment with rdkit. To use the code as is, create a csv file with the ID or name of the compound followed by the SMILE string. Use a new line for each compound. 
 
-Then run test.py using the Morgan fingerprints and loading the given checkpoint: weights.ckpy.
+Then run test.py using the Morgan fingerprints and loading the given checkpoint: weights.ckpt.
 
 To test:
 
