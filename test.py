@@ -2,7 +2,7 @@ import argparse
 import torch
 import os
 from pytorch_lightning import Trainer
-from system import System
+from system_cpu import System
 
 if __name__ == '__main__':
         parser = argparse.ArgumentParser()
@@ -12,7 +12,7 @@ if __name__ == '__main__':
         parser.add_argument('--batch-size', type=int, default=1000, help='Number of samples per batch')
         parser.add_argument('--lr', type=float, default=1e-4, help='Learning rate per batch')
         parser.add_argument('--max-epochs', type=int, default=1000)
-        parser.add_argument('--max-steps', type=int, default=10000)
+        parser.add_argument('--max-steps', type=int, default=100000)
         parser.add_argument('--early-stop', type=int, default=50)
         parser.add_argument('--grad-acc', type=int, default=1)
         parser.add_argument('--num-workers', type=int, default=0)
@@ -28,11 +28,14 @@ if __name__ == '__main__':
         cell_lines = open('cell_lines.txt','r')
         preds_out = open(args.out + 'PECAN_predictions.csv','w')
         preds_out.write(cell_lines.readline()+'\n')
-        for p in predictions[0]:
-            p = p.tolist()
-            for v in p:
-                preds_out.write(str(v)+',')
-            preds_out.write('\n')
+        
+        for b in range(len(predictions)):
+            print (b)
+            for p in predictions[b]:
+                p = p.tolist()
+                preds_out.write(str(p)[1:-1])
+                preds_out.write('\n')
+
         preds_out.close()
         print ('Predictions written')
 
