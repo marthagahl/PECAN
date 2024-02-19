@@ -187,7 +187,7 @@ class System(pl.LightningModule):
 
 
     def predict_dataloader(self):
-        dataset = BioactivityDataset(self.args.data_path + 'labtest720.pkl', test=True)
+        dataset = BioactivityDataset(self.args.data_path + self.args.fp_name, test=True)
         return DataLoader(
             dataset,
             num_workers=self.num_workers,

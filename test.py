@@ -2,13 +2,14 @@ import argparse
 import torch
 import os
 from pytorch_lightning import Trainer
-from system_cpu import System
+from system import System
 
 if __name__ == '__main__':
         parser = argparse.ArgumentParser()
         parser.add_argument('name', type=str, help='Name of the experiment')
         parser.add_argument('--load', type=str, required=True, help='Path to checkpoint weights')
         parser.add_argument('--data-path', type=str, required=True, help='Path to dataset')
+        parser.add_argument('--fp-name', type=str, required=True, help='Name of file containing fingerprints')
         parser.add_argument('--batch-size', type=int, default=1000, help='Number of samples per batch')
         parser.add_argument('--lr', type=float, default=1e-4, help='Learning rate per batch')
         parser.add_argument('--max-epochs', type=int, default=1000)

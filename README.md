@@ -39,7 +39,7 @@ Then run test.py using the Morgan fingerprints and loading the given weights: we
 To test:
 
 ```
-python3 test.py <experiment name> --load </path/to/checkpoint/weights.ckpt>  --data-path </path/to/compounds> --out </path/to/out/directory/>
+python3 test.py <experiment name> --load </path/to/checkpoint/weights.ckpt>  --data-path </path/to/compounds> --fp-name <name of fp file.pkl> --out </path/to/out/directory/>
 ```
 
 ### Citing PECAN
