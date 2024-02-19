@@ -57,6 +57,8 @@ If you use PECAN in your work, please cite with the following BibTeX entry:
 }
 ```
 
+The paper is now published and available [here](https://pubs.acs.org/doi/10.1021/acs.jnatprod.3c00879).
+
 ### Copyright Notice
 
 This material is Copyright © 2023 The Regents of the University of California. All Rights Reserved. Permission to copy, modify, and distribute this material and its documentation for educational, research and non-profit purposes, without fee, and without a written agreement is hereby granted, provided that the above copyright notice, this paragraph and the following three paragraphs appear in all copies. Permission to make commercial use of this material may be obtained by contacting:
